@@ -15,7 +15,7 @@ Number Theory SageMaths module quick reference
 https://wiki.sagemath.org/quickref?action=AttachFile&do=get&target=quickref-nt.pdf
 http://www.math.umbc.edu/~campbell/Computers/SAGE/numbthy.html
 
-Elemental Number Thepry using SageMaths
+Elemental Number Theory using SageMaths
 https://doc.sagemath.org/html/en/prep/Quickstarts/Number-Theory.html
 
 
