@@ -1,9 +1,8 @@
 
 # coding=UTF-8
 """
-Factorial: Calcula el factorial de n
-
-Implementación recursiva.
+Factorial: Evalute n factorial, 
+recursive implementation
 
 """
 

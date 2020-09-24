@@ -1,5 +1,10 @@
-# coding=UTF-8
-
+###################################################
+# Name: n_numbers.py
+# Description: n-agon number algoritms impementations.
+# Author: Salanitri Sergio
+# Date: 24-07-2018
+# Version: 0.1 
+##################################################
 
 def triangular(n):
     nt = []
@@ -20,26 +25,26 @@ def isTriangular(N):
         
     return False
         
-# Si es es triangular devuelve el siguiente sino False.
-def nearTriangular(N):
+# If N is triangular number return the next triagular, else return False.
+def nextTriangular(N):
     
-    Near = []
+    near = []
     
     n=1
     
     while  n <= N:
         if(N == n*(n+1)/2):
-            Near.append((n-1)*n/2)
-            Near.append((n+1)*(n+2)/2)
+            near.append((n-1)*n/2)
+            near.append((n+1)*(n+2)/2)
             return Near
         n = n + 1
         
     return False
     
-#Devuele el triangular inferior y superior a un entero n dado.
-#Si n es triangular devulve n.
-def nearInteger(n):   
-    Near = []
+#Returns the lower and upper triangular to a given integer
+#If n is triangular return n.
+def nearTriangular(n):   
+    near = []
     draft = []*(n+1)
     
     if n == 1: return n 
@@ -52,11 +57,10 @@ def nearInteger(n):
         if  i > 1 and i == ni:
             return i
         elif ni > n:
-            Near.append((i-1)*i/2)
-            Near.append(ni)
-            return Near
-       
-        
+            near.append((i-1)*i/2)
+            near.append(ni)
+            return near
+      
     return n
     
         
