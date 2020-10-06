@@ -1,4 +1,4 @@
-# numbertheory
+# Plot Number Theory
 
 # Goals
 
