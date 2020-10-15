@@ -1,0 +1,4 @@
+{
+    "key": "ctrl+m ctrl+p",
+    "command": "multiCommand.panelActiveFile",
+}

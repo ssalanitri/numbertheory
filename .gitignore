@@ -22,6 +22,7 @@ var/
 wheels/
 examples/
 venv/
+panel-examples/
 share/python-wheels/
 *.egg-info/
 .installed.cfg

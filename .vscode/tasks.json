@@ -1,0 +1,76 @@
+// tasks.json
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Activate venv",
+            "type": "shell",
+            "isBackground": true,
+            "windows": {
+                "command": "& ${workspaceFolder}\\venv\\Scripts\\Activate.ps1"
+              },
+            // you have to allow the task to not complete by specifying a complete problem matcher
+            "problemMatcher": {
+                "fileLocation": [
+                    "relative",
+                    "${workspaceFolder}"
+                ],
+                "pattern": [
+                    {
+                        "regexp": ".",
+                        "file": 1,
+                        "location": 2,
+                        "message": 3
+                    }
+                ]
+            }
+        },
+        {
+            "label": "Launch Bokeh server",
+            "type": "shell",
+            "isBackground": true,
+            "windows": {
+                "command": "bokeh"
+              },
+            "args": [
+                "serve",
+                "--show",
+                "distribution",
+                "--port=5008"
+            ],
+            "options": {
+                "env": {
+                    "BOKEH_VS_DEBUG": "true"
+                },
+                "cwd": "${workspaceFolder}\\demos\\app"
+            },
+            // you have to allow the task to not complete by specifying a complete problem matcher
+            "problemMatcher": {
+                "fileLocation": [
+                    "relative",
+                    "${workspaceFolder}"
+                ],
+                "pattern": [
+                    {
+                        "regexp": ".",
+                        "file": 1,
+                        "location": 2,
+                        "message": 3
+                    }
+                ],
+                "background": {
+                    "activeOnStart": true,
+                    "endsPattern": "^.*Waiting for debugger attach.*",
+                    "beginsPattern": "^this should not match on anything"
+                }
+            }
+        },
+        {
+            "label": "Launch App",
+            "dependsOn": [
+                "Activate venv",
+                "Launch Bokeh server"
+            ]
+        }
+     ]
+}
